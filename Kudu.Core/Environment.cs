@@ -59,7 +59,7 @@ namespace Kudu.Core
             _sshKeyPath = sshKeyPath;
             _scriptPath = scriptPath;
             _nodeModulesPath = nodeModulesPath;
-            this._binPath = binPath;
+            _binPath = binPath;
 
             _dataPath = dataPath;
 
@@ -92,7 +92,7 @@ namespace Kudu.Core
             _sshKeyPath = Path.Combine(rootPath, Constants.SSHKeyPath);
             _scriptPath = Path.Combine(binPath, Constants.ScriptsPath);
             _nodeModulesPath = Path.Combine(binPath, Constants.NodeModulesPath);
-            this._binPath = binPath;
+            _binPath = binPath;
             _logFilesPath = Path.Combine(rootPath, Constants.LogFilesPath);
             _applicationLogFilesPath = Path.Combine(_logFilesPath, Constants.ApplicationLogFilesDirectory);
             _tracePath = Path.Combine(rootPath, Constants.TracePath);
@@ -197,7 +197,7 @@ namespace Kudu.Core
         {
             get
             {
-                return this._binPath;
+                return _binPath;
             }
         }
 

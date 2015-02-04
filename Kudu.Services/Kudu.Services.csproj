@@ -9,7 +9,6 @@
     <AssemblyName>Kudu.Services</AssemblyName>
     <CodeAnalysisAdditionalOptions>/assemblyCompareMode:StrongNameIgnoringVersion</CodeAnalysisAdditionalOptions>
     <DocumentationFile>bin\Debug\Kudu.Services.XML</DocumentationFile>
-    <NuGetPackageImportStamp>4c6b70dd</NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <NoWarn>1591</NoWarn>

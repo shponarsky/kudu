@@ -15,7 +15,8 @@
         string ScriptPath { get; }
 
         /// <summary>
-        /// Path to Kudu SCM site binary folder
+        /// <para>Path to Kudu SCM site binary folder</para>
+        /// <para>e.g E:\kudu\Kudu.Services.Web\bin</para>
         /// </summary>
         string BinPath { get; } 
         string NodeModulesPath { get; }

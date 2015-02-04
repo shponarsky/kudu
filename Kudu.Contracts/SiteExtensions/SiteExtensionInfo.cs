@@ -43,36 +43,36 @@ namespace Kudu.Contracts.SiteExtensions
 
         public SiteExtensionInfo(UIPackageMetadata data)
         {
-            this.Id = data.Identity.Id;
-            this.Title = data.Identity.Id;
-            this.Type = SiteExtensionType.Gallery;
-            this.Summary = data.Summary;
-            this.Description = data.Description;
-            this.Version = data.Identity.Version.ToNormalizedString();
-            this.ProjectUrl = data.ProjectUrl == null ? null : data.ProjectUrl.ToString();
-            this.IconUrl = data.IconUrl == null ? "https://www.siteextensions.net/Content/Images/packageDefaultIcon-50x50.png" : data.IconUrl.ToString();
-            this.LicenseUrl = data.LicenseUrl == null ? null : data.LicenseUrl.ToString();
-            this.Authors = data.Authors.Split(new string[] { "  " }, StringSplitOptions.RemoveEmptyEntries);
-            this.PublishedDateTime = data.Published;
-            this.IsLatestVersion = true;
-            this.DownloadCount = data.DownloadCount;
+            Id = data.Identity.Id;
+            Title = data.Identity.Id;
+            Type = SiteExtensionType.Gallery;
+            Summary = data.Summary;
+            Description = data.Description;
+            Version = data.Identity.Version.ToNormalizedString();
+            ProjectUrl = data.ProjectUrl == null ? null : data.ProjectUrl.ToString();
+            IconUrl = data.IconUrl == null ? "https://www.siteextensions.net/Content/Images/packageDefaultIcon-50x50.png" : data.IconUrl.ToString();
+            LicenseUrl = data.LicenseUrl == null ? null : data.LicenseUrl.ToString();
+            Authors = data.Authors.Split(new string[] { "  " }, StringSplitOptions.RemoveEmptyEntries);
+            PublishedDateTime = data.Published;
+            IsLatestVersion = true;
+            DownloadCount = data.DownloadCount;
         }
 
         public SiteExtensionInfo(UISearchMetadata data)
         {
-            this.Id = data.Identity.Id;
-            this.Title = data.Identity.Id;
-            this.Type = SiteExtensionType.Gallery;
-            this.Summary = data.LatestPackageMetadata.Summary;
-            this.Description = data.LatestPackageMetadata.Description;
-            this.Version = data.Identity.Version.ToNormalizedString();
-            this.ProjectUrl = data.LatestPackageMetadata.ProjectUrl == null ? null : data.LatestPackageMetadata.ProjectUrl.ToString();
-            this.IconUrl = data.LatestPackageMetadata.IconUrl == null ? "https://www.siteextensions.net/Content/Images/packageDefaultIcon-50x50.png" : data.LatestPackageMetadata.IconUrl.ToString();
-            this.LicenseUrl = data.LatestPackageMetadata.LicenseUrl == null ? null : data.LatestPackageMetadata.LicenseUrl.ToString();
-            this.Authors = data.LatestPackageMetadata.Authors.Split(new string[] { "  " }, StringSplitOptions.RemoveEmptyEntries);
-            this.PublishedDateTime = data.LatestPackageMetadata.Published;
-            this.IsLatestVersion = data.Identity.Version.Equals(data.LatestPackageMetadata.Identity.Version);
-            this.DownloadCount = data.LatestPackageMetadata.DownloadCount;
+            Id = data.Identity.Id;
+            Title = data.Identity.Id;
+            Type = SiteExtensionType.Gallery;
+            Summary = data.LatestPackageMetadata.Summary;
+            Description = data.LatestPackageMetadata.Description;
+            Version = data.Identity.Version.ToNormalizedString();
+            ProjectUrl = data.LatestPackageMetadata.ProjectUrl == null ? null : data.LatestPackageMetadata.ProjectUrl.ToString();
+            IconUrl = data.LatestPackageMetadata.IconUrl == null ? "https://www.siteextensions.net/Content/Images/packageDefaultIcon-50x50.png" : data.LatestPackageMetadata.IconUrl.ToString();
+            LicenseUrl = data.LatestPackageMetadata.LicenseUrl == null ? null : data.LatestPackageMetadata.LicenseUrl.ToString();
+            Authors = data.LatestPackageMetadata.Authors.Split(new string[] { "  " }, StringSplitOptions.RemoveEmptyEntries);
+            PublishedDateTime = data.LatestPackageMetadata.Published;
+            IsLatestVersion = data.Identity.Version.Equals(data.LatestPackageMetadata.Identity.Version);
+            DownloadCount = data.LatestPackageMetadata.DownloadCount;
         }
 
         [JsonProperty(PropertyName = "id")]
