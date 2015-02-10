@@ -1,12 +1,13 @@
-﻿using System;
+﻿using Kudu.Client.Infrastructure;
+using Kudu.Contracts.SiteExtensions;
+using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using Kudu.Client.Infrastructure;
-using Kudu.Contracts.SiteExtensions;
-using Newtonsoft.Json.Linq;
+using System.Web;
 
 namespace Kudu.Client.SiteExtensions
 {
@@ -43,7 +44,7 @@ namespace Kudu.Client.SiteExtensions
             {
                 url.Append(separator);
                 url.Append("feedUrl=");
-                url.Append(feedUrl);
+                url.Append(HttpUtility.UrlEncode(feedUrl));
             }
 
             return await Client.GetJsonAsync<IEnumerable<SiteExtensionInfo>>(url.ToString());
@@ -68,7 +69,7 @@ namespace Kudu.Client.SiteExtensions
             {
                 url.Append(separator);
                 url.Append("feedUrl=");
-                url.Append(feedUrl);
+                url.Append(HttpUtility.UrlEncode(feedUrl));
             }
 
             return await Client.GetJsonAsync<SiteExtensionInfo>(url.ToString());
